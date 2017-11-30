@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import './app.scss';
+import App from './components/app';
+import css from './app.scss';
 
-ReactDOM.render(
-  <h1>Hello, Application</h1>,
-  document.getElementById('app')
-);
+ReactDOM.render(<App />,document.getElementById('app'));

@@ -17,7 +17,7 @@ const config = {
         use: ExtractTextPlugin.extract({fallback: 'style-loader',
         use: ["css-loader", "sass-loader"]
         })
-      }
+      },
     ]
   },
   devServer: {
@@ -26,7 +26,7 @@ const config = {
     port: 9000
   },
   plugins: [
-    new ExtractTextPlugin("dist/styles.css"),
+    new ExtractTextPlugin("dist/styles.css",{allChunks: true}),
     new HtmlWebpackPlugin({
       hash: false,
       template: "./index.html"
