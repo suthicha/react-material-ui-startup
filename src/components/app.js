@@ -5,7 +5,6 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
-import Paper from 'material-ui/Paper';
 import { colors } from 'material-ui/styles';
 
 const muiTheme = getMuiTheme({
@@ -16,15 +15,6 @@ const muiTheme = getMuiTheme({
     height:90
   }
 });
-
-const style = {
-  height: 200,
-  width: 200,
-  margin: 20,
-  textAlign: 'center',
-  display: 'inline-block',
-  position: 'relative',
-};
 
 class App extends React.Component {
   constructor(props){
@@ -47,10 +37,8 @@ class App extends React.Component {
           iconClassNameRight="muidocs-icon-navigation-expand-more"
           onLeftIconButtonTouchTap={this.handleToggle}
         />
-        <div>
-          <Paper style={style} zDepth={3} rounded={false} />
-          <Paper style={style} zDepth={3} rounded={false} />
-          <Paper style={style} zDepth={3} rounded={false} />
+        <div className="container">
+          { this.props.children }
         </div>
         <Drawer
           docked= {false}
